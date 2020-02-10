@@ -1,0 +1,5 @@
+#+TITLE: secretboi
+
+The [[https://www.vaultproject.io/][Hashicorp Vault]] Kubernetes sidecar that doesn't suck.
+
+/Just kidding, this one sucks too./

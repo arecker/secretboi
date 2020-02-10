@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  secretboi:
+    image: arecker/secretboi:latest
+    build: .

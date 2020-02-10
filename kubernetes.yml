@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secretboi
+spec:
+  volumes:
+    - name: secrets
+      emptyDir: {}
+  containers:
+  - name: secretboi
+    image: arecker/secretboi-new:latest
+    volumeMounts:
+      - name: secrets
+        mountPath: /secrets
+    env:
+      - name: VAULT_ADDR
+        value: http://vault.local
+      - name: VAULT_ROLE
+        value: chorebot
+      - name: SECRET_WEBHOOK
+        value: /slack/reckerfamily/webhook
