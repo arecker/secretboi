@@ -77,7 +77,8 @@ class Client:
             data = response['data']['data']
 
             if self.recurse_secrets:
-                logger.info('recursing enabled, writing keys to their own files')
+                logger.info('recursing enabled, writing keys inside %s to their own files within %s', k, target)
+                os.makedirs(target)
                 for k, v in data.items():
                     r_target = os.path.join(target, k)
                     logger.info('writing %s to %s', v, r_target)
