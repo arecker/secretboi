@@ -83,7 +83,7 @@ class Client:
                     r_target = os.path.join(target, k)
                     logger.info('writing to %s', r_target)
                     with open(r_target, 'w') as f:
-                        f.write(json.dumps(v))
+                        f.write(v)
             else:
                 logger.info('writing to %s', target)
                 with open(target, 'w') as f:
