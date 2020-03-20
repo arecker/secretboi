@@ -81,10 +81,10 @@ class Client:
                 os.makedirs(target)
                 for k, v in data.items():
                     r_target = os.path.join(target, k)
-                    logger.info('writing %s to %s', v, r_target)
+                    logger.info('writing to %s', r_target)
                     with open(r_target, 'w') as f:
                         f.write(json.dumps(v))
             else:
-                logger.info('writing %s to %s', v, target)
+                logger.info('writing to %s', target)
                 with open(target, 'w') as f:
                     f.write(json.dumps(data))
